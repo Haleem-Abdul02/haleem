@@ -612,6 +612,171 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
+        /* ===== Added mobile-responsiveness (no other changes) ===== */
+
+        /* Tablet / small laptop */
+        @media (max-width: 900px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image-container {
+                max-width: 320px;
+                margin: 0 auto;
+                aspect-ratio: 1/1;
+            }
+        }
+
+        /* Nav collapses to a scrollable row instead of overflowing/wrapping oddly */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0.85rem 4%;
+            }
+
+            nav .container {
+                flex-direction: column;
+                gap: 0.75rem;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                width: 100%;
+                gap: 1rem;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 0.25rem;
+                scrollbar-width: none;
+            }
+
+            .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+
+            .nav-links li {
+                flex: 0 0 auto;
+            }
+
+            .hero {
+                padding-top: 9rem;
+            }
+        }
+
+        /* Phones */
+        @media (max-width: 600px) {
+            section {
+                padding: 3.5rem 6%;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 8.5rem 6% 3rem;
+            }
+
+            .hero-content h1 {
+                font-size: 1.85rem;
+                line-height: 1.2;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.05rem;
+            }
+
+            .hero-content p {
+                font-size: 0.95rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box;
+            }
+
+            .profile-image-container {
+                width: 200px;
+                height: 200px;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+                margin-bottom: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-card {
+                padding: 1rem;
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+
+            .education-section,
+            .references-grid,
+            .skills-grid,
+            .projects-grid,
+            .activities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-item {
+                padding: 1.5rem;
+            }
+
+            .experience-header {
+                text-align: left;
+            }
+
+            .experience-title {
+                font-size: 1.25rem;
+            }
+
+            .project-content {
+                padding: 1.5rem;
+            }
+
+            .contact-item {
+                flex-wrap: wrap;
+                word-break: break-word;
+            }
+
+            #contact .cta-buttons {
+                flex-direction: column;
+            }
+
+            footer {
+                padding: 2.5rem 6%;
+            }
+
+            .social-links {
+                gap: 1.25rem;
+            }
+        }
+
+        /* Very small phones */
+        @media (max-width: 380px) {
+            .hero-content h1 {
+                font-size: 1.6rem;
+            }
+
+            .profile-image-container {
+                width: 170px;
+                height: 170px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -975,10 +1140,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
